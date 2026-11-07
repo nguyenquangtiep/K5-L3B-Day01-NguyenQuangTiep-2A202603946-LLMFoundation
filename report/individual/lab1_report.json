@@ -3,43 +3,43 @@
  "predictions": {
   "ml_f1": {
    "text": "F1 khoảng 0.7",
-   "time": "16:18:06"
+   "time": "16:39:12"
   },
   "ml_lr": {
    "text": "lr=0.001 thì loss giảm ít, lr=50 thì loss giảm nhanh",
-   "time": "16:27:06"
+   "time": "16:41:03"
   },
   "dl_curve": {
    "text": "val loss không giảm mãi",
-   "time": "16:31:57"
+   "time": "16:41:47"
   },
   "dl_relu": {
    "text": "không rõ",
-   "time": "16:33:29"
+   "time": "16:42:12"
   },
   "emb_search": {
    "text": "spam",
-   "time": "16:37:42"
+   "time": "16:44:51"
   },
   "emb_tricky": {
    "text": "Encoder + LogReg",
-   "time": "16:41:43"
+   "time": "16:46:15"
   },
   "llm_models": {
    "text": "gpt-6.1-terra",
-   "time": "16:49:44"
+   "time": "16:46:28"
   },
   "llm_fewshot": {
    "text": "F1 giảm",
-   "time": "16:50:01"
+   "time": "16:46:28"
   },
   "tradeoff": {
    "text": "không rõ",
-   "time": "16:50:33"
+   "time": "16:46:28"
   },
   "hard_eval": {
    "text": "không rõ",
-   "time": "16:51:02"
+   "time": "16:46:29"
   }
  },
  "checks": {
@@ -53,52 +53,52 @@
   "3.3 knn_predict": true,
   "4.2–4.3 prompt / parse_label": true,
   "4.1 + 4.4 call_openai / llm_classify_batch": true,
-  "tính tay: baseline_accuracy": false,
-  "tính tay: sigmoid_0": false,
-  "tính tay: f1_example": false,
-  "tính tay: cosine_example": false,
-  "tính tay: llm_cost_per_day": false
+  "tính tay: baseline_accuracy": true,
+  "tính tay: sigmoid_0": true,
+  "tính tay: f1_example": true,
+  "tính tay: cosine_example": true,
+  "tính tay: llm_cost_per_day": true
  },
  "experiments": [
   {
    "key": "ml_f1",
-   "time": "16:21:12"
+   "time": "16:39:12"
   },
   {
    "key": "ml_lr",
-   "time": "16:27:08"
+   "time": "16:41:03"
   },
   {
    "key": "dl_curve",
-   "time": "16:32:16"
+   "time": "16:41:47"
   },
   {
    "key": "dl_relu",
-   "time": "16:33:31"
+   "time": "16:42:12"
   },
   {
    "key": "emb_search",
-   "time": "16:37:44"
+   "time": "16:44:51"
   },
   {
    "key": "emb_tricky",
-   "time": "16:41:45"
+   "time": "16:46:15"
   },
   {
    "key": "llm_models",
-   "time": "16:49:46"
+   "time": "16:46:28"
   },
   {
    "key": "llm_fewshot",
-   "time": "16:50:02"
+   "time": "16:46:28"
   },
   {
    "key": "tradeoff",
-   "time": "16:50:35"
+   "time": "16:46:28"
   },
   {
    "key": "hard_eval",
-   "time": "16:51:04"
+   "time": "16:46:29"
   }
  ],
  "challenge": 2,
@@ -109,10 +109,10 @@
    "recall": 0.9080459770114943,
    "f1": 0.9404761904761905,
    "f1_SUB": 0.9473684210526315,
-   "train_s": 2.355932219001261,
-   "msg_per_s": 38726.5917109151,
-   "p50_ms": 0.04558549881039653,
-   "p95_ms": 0.05954149855824651,
+   "train_s": 4.421544089000008,
+   "msg_per_s": 92.6796223566556,
+   "p50_ms": 15.834760499956246,
+   "p95_ms": 23.11499155016461,
    "usd_per_1k": 0.0
   },
   "2. BoW + MLP (deep learning)": {
@@ -121,10 +121,10 @@
    "recall": 0.9770114942528736,
    "f1": 0.96045197740113,
    "f1_SUB": 0.9743589743589743,
-   "train_s": 9.212146079997183,
-   "msg_per_s": 36711.27773569724,
-   "p50_ms": 0.15431949941557832,
-   "p95_ms": 0.2059474993075126,
+   "train_s": 9.010909275999893,
+   "msg_per_s": 53.594268649491035,
+   "p50_ms": 15.823117000081766,
+   "p95_ms": 22.009960649927503,
    "usd_per_1k": 0.0
   },
   "3a. Encoder (MiniLM) + kNN": {
@@ -133,10 +133,10 @@
    "recall": 0.9655172413793104,
    "f1": 0.9130434782608695,
    "f1_SUB": 0.9743589743589743,
-   "train_s": 98.48189209499833,
-   "msg_per_s": 16.565759370542292,
-   "p50_ms": 85.61547550016257,
-   "p95_ms": 148.4729234996848,
+   "train_s": 83.12299618400016,
+   "msg_per_s": 27.644207135834368,
+   "p50_ms": 46.375926499877096,
+   "p95_ms": 60.33414930014942,
    "usd_per_1k": 0.0
   },
   "3b. Encoder (MiniLM) + LogReg": {
@@ -145,10 +145,10 @@
    "recall": 0.9540229885057471,
    "f1": 0.9540229885057471,
    "f1_SUB": 0.9743589743589743,
-   "train_s": 100.33925139599887,
-   "msg_per_s": 19.606287561749134,
-   "p50_ms": 83.5141699990345,
-   "p95_ms": 153.3243760024561,
+   "train_s": 83.5532110590002,
+   "msg_per_s": 30.642817447936864,
+   "p50_ms": 27.335174000086226,
+   "p95_ms": 37.50962870001331,
    "usd_per_1k": 0.0
   },
   "3c. Encoder (MiniLM) + MLP head": {
@@ -157,10 +157,10 @@
    "recall": 0.9540229885057471,
    "f1": 0.9595375722543352,
    "f1_SUB": 0.9743589743589743,
-   "train_s": 100.01771979299883,
-   "msg_per_s": 19.076566301697596,
-   "p50_ms": 108.06548449909315,
-   "p95_ms": 204.26347744687519,
+   "train_s": 84.08995292400027,
+   "msg_per_s": 30.76456732740726,
+   "p50_ms": 27.69127349995415,
+   "p95_ms": 37.539667500038824,
    "usd_per_1k": 0.0
   }
  }
